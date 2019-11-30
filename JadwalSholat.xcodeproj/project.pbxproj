@@ -7,21 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2B0BC023928E1000CCB16C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B0BBF23928E1000CCB16C /* Result.swift */; };
 		2E4007B323893F970083F1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007B223893F970083F1BD /* AppDelegate.swift */; };
-		2E4007B523893F970083F1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007B423893F970083F1BD /* ViewController.swift */; };
-		2E4007B823893F970083F1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4007B623893F970083F1BD /* Main.storyboard */; };
 		2E4007BA23893F980083F1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4007B923893F980083F1BD /* Assets.xcassets */; };
-		2E4007BD23893F980083F1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E4007BB23893F980083F1BD /* LaunchScreen.storyboard */; };
+		2E4007C6238941800083F1BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007C5238941800083F1BD /* HomeController.swift */; };
+		2E4007C8238941B20083F1BD /* Jadwal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007C7238941B20083F1BD /* Jadwal.swift */; };
+		2E4007CF238941EC0083F1BD /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007C9238941EB0083F1BD /* UIView+Anchor.swift */; };
+		2E4007D0238941EC0083F1BD /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007CA238941EB0083F1BD /* UITableView+Register.swift */; };
+		2E4007D1238941EC0083F1BD /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007CB238941EB0083F1BD /* UIColor+String.swift */; };
+		2E4007D2238941EC0083F1BD /* CGContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007CC238941EC0083F1BD /* CGContextExtensions.swift */; };
+		2E4007D3238941EC0083F1BD /* UITableView+Dequeing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007CD238941EC0083F1BD /* UITableView+Dequeing.swift */; };
+		2E4007D4238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007CE238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift */; };
+		2E4007DC2389420C0083F1BD /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007D62389420C0083F1BD /* Provider.swift */; };
+		2E4007DE2389420C0083F1BD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007D82389420C0083F1BD /* APIError.swift */; };
+		2E4007DF2389420C0083F1BD /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007D92389420C0083F1BD /* EndpointType.swift */; };
+		2E4007E02389420C0083F1BD /* JadwalEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007DA2389420C0083F1BD /* JadwalEndpoint.swift */; };
+		2E4007E12389420C0083F1BD /* JadwalNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007DB2389420C0083F1BD /* JadwalNetworkModel.swift */; };
+		2E4007E62389426A0083F1BD /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007E32389426A0083F1BD /* AppCell.swift */; };
+		2E4007E72389426A0083F1BD /* StarshipsListCellBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007E42389426A0083F1BD /* StarshipsListCellBackground.swift */; };
+		2E4007E82389426A0083F1BD /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007E52389426A0083F1BD /* HomeHeaderCell.swift */; };
+		2E4007ED2389429C0083F1BD /* JadwalCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */; };
+		2E4007EE2389429C0083F1BD /* JadwalHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */; };
+		2E4007EF2389429C0083F1BD /* JadwalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EC2389429C0083F1BD /* JadwalViewModel.swift */; };
+		2E4007F423894DE60083F1BD /* SplashController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */; };
+		2EE32C0E238BCDD4004BDC22 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE32C0D238BCDD4004BDC22 /* SplashController.swift */; };
+		9365E9BC4044B9D987AE1014 /* Pods_JadwalSholat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JadwalSholat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2B0BBF23928E1000CCB16C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2E4007AF23893F970083F1BD /* JadwalSholat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JadwalSholat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4007B223893F970083F1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E4007B423893F970083F1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2E4007B723893F970083F1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E4007B923893F980083F1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2E4007BC23893F980083F1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E4007BE23893F980083F1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E4007C5238941800083F1BD /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		2E4007C7238941B20083F1BD /* Jadwal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jadwal.swift; sourceTree = "<group>"; };
+		2E4007C9238941EB0083F1BD /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		2E4007CA238941EB0083F1BD /* UITableView+Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		2E4007CB238941EB0083F1BD /* UIColor+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
+		2E4007CC238941EC0083F1BD /* CGContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGContextExtensions.swift; sourceTree = "<group>"; };
+		2E4007CD238941EC0083F1BD /* UITableView+Dequeing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeing.swift"; sourceTree = "<group>"; };
+		2E4007CE238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		2E4007D62389420C0083F1BD /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		2E4007D82389420C0083F1BD /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2E4007D92389420C0083F1BD /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		2E4007DA2389420C0083F1BD /* JadwalEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalEndpoint.swift; sourceTree = "<group>"; };
+		2E4007DB2389420C0083F1BD /* JadwalNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalNetworkModel.swift; sourceTree = "<group>"; };
+		2E4007E32389426A0083F1BD /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		2E4007E42389426A0083F1BD /* StarshipsListCellBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsListCellBackground.swift; sourceTree = "<group>"; };
+		2E4007E52389426A0083F1BD /* HomeHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalCellViewModel.swift; sourceTree = "<group>"; };
+		2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalHeaderViewModel.swift; sourceTree = "<group>"; };
+		2E4007EC2389429C0083F1BD /* JadwalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalViewModel.swift; sourceTree = "<group>"; };
+		2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashController+CLLocationManager.swift"; sourceTree = "<group>"; };
+		2EE32C0D238BCDD4004BDC22 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.debug.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.debug.xcconfig"; sourceTree = "<group>"; };
+		BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.release.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9365E9BC4044B9D987AE1014 /* Pods_JadwalSholat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +83,8 @@
 			children = (
 				2E4007B123893F970083F1BD /* JadwalSholat */,
 				2E4007B023893F970083F1BD /* Products */,
+				CC9730D33DE49220A293BE96 /* Pods */,
+				DFA2BAD7784F415485A09A65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +99,98 @@
 		2E4007B123893F970083F1BD /* JadwalSholat */ = {
 			isa = PBXGroup;
 			children = (
+				2E4007D5238941F10083F1BD /* Utils */,
+				2E4007E9238942710083F1BD /* Views */,
+				2E4007F0238942A10083F1BD /* ViewModels */,
+				2E4007E2238942180083F1BD /* Service */,
+				2E4007F5238950260083F1BD /* Entity */,
+				2E4007F6238950300083F1BD /* Controller */,
 				2E4007B223893F970083F1BD /* AppDelegate.swift */,
-				2E4007B423893F970083F1BD /* ViewController.swift */,
-				2E4007B623893F970083F1BD /* Main.storyboard */,
 				2E4007B923893F980083F1BD /* Assets.xcassets */,
-				2E4007BB23893F980083F1BD /* LaunchScreen.storyboard */,
 				2E4007BE23893F980083F1BD /* Info.plist */,
 			);
 			path = JadwalSholat;
+			sourceTree = "<group>";
+		};
+		2E4007D5238941F10083F1BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007CC238941EC0083F1BD /* CGContextExtensions.swift */,
+				2E4007CB238941EB0083F1BD /* UIColor+String.swift */,
+				2E4007CD238941EC0083F1BD /* UITableView+Dequeing.swift */,
+				2E4007CA238941EB0083F1BD /* UITableView+Register.swift */,
+				2E4007CE238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift */,
+				2E4007C9238941EB0083F1BD /* UIView+Anchor.swift */,
+				2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */,
+				2E2B0BBF23928E1000CCB16C /* Result.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2E4007E2238942180083F1BD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007D82389420C0083F1BD /* APIError.swift */,
+				2E4007D92389420C0083F1BD /* EndpointType.swift */,
+				2E4007DA2389420C0083F1BD /* JadwalEndpoint.swift */,
+				2E4007DB2389420C0083F1BD /* JadwalNetworkModel.swift */,
+				2E4007D62389420C0083F1BD /* Provider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2E4007E9238942710083F1BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007E32389426A0083F1BD /* AppCell.swift */,
+				2E4007E52389426A0083F1BD /* HomeHeaderCell.swift */,
+				2E4007E42389426A0083F1BD /* StarshipsListCellBackground.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E4007F0238942A10083F1BD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */,
+				2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */,
+				2E4007EC2389429C0083F1BD /* JadwalViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2E4007F5238950260083F1BD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007C7238941B20083F1BD /* Jadwal.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		2E4007F6238950300083F1BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E4007C5238941800083F1BD /* HomeController.swift */,
+				2EE32C0D238BCDD4004BDC22 /* SplashController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC9730D33DE49220A293BE96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */,
+				BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFA2BAD7784F415485A09A65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4007C123893F980083F1BD /* Build configuration list for PBXNativeTarget "JadwalSholat" */;
 			buildPhases = (
+				6A190D3151869893E0052BE1 /* [CP] Check Pods Manifest.lock */,
 				2E4007AB23893F970083F1BD /* Sources */,
 				2E4007AC23893F970083F1BD /* Frameworks */,
 				2E4007AD23893F970083F1BD /* Resources */,
+				E5AFBF472F55A61D2DB8BED9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,44 +253,95 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4007BD23893F980083F1BD /* LaunchScreen.storyboard in Resources */,
 				2E4007BA23893F980083F1BD /* Assets.xcassets in Resources */,
-				2E4007B823893F970083F1BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A190D3151869893E0052BE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JadwalSholat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5AFBF472F55A61D2DB8BED9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E4007AB23893F970083F1BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E4007B523893F970083F1BD /* ViewController.swift in Sources */,
+				2E4007DF2389420C0083F1BD /* EndpointType.swift in Sources */,
+				2E4007E12389420C0083F1BD /* JadwalNetworkModel.swift in Sources */,
+				2E4007D0238941EC0083F1BD /* UITableView+Register.swift in Sources */,
+				2E4007E02389420C0083F1BD /* JadwalEndpoint.swift in Sources */,
 				2E4007B323893F970083F1BD /* AppDelegate.swift in Sources */,
+				2E4007D2238941EC0083F1BD /* CGContextExtensions.swift in Sources */,
+				2EE32C0E238BCDD4004BDC22 /* SplashController.swift in Sources */,
+				2E4007C8238941B20083F1BD /* Jadwal.swift in Sources */,
+				2E4007E82389426A0083F1BD /* HomeHeaderCell.swift in Sources */,
+				2E4007E62389426A0083F1BD /* AppCell.swift in Sources */,
+				2E4007EF2389429C0083F1BD /* JadwalViewModel.swift in Sources */,
+				2E4007E72389426A0083F1BD /* StarshipsListCellBackground.swift in Sources */,
+				2E4007F423894DE60083F1BD /* SplashController+CLLocationManager.swift in Sources */,
+				2E2B0BC023928E1000CCB16C /* Result.swift in Sources */,
+				2E4007D4238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift in Sources */,
+				2E4007D1238941EC0083F1BD /* UIColor+String.swift in Sources */,
+				2E4007DC2389420C0083F1BD /* Provider.swift in Sources */,
+				2E4007C6238941800083F1BD /* HomeController.swift in Sources */,
+				2E4007EE2389429C0083F1BD /* JadwalHeaderViewModel.swift in Sources */,
+				2E4007D3238941EC0083F1BD /* UITableView+Dequeing.swift in Sources */,
+				2E4007ED2389429C0083F1BD /* JadwalCellViewModel.swift in Sources */,
+				2E4007CF238941EC0083F1BD /* UIView+Anchor.swift in Sources */,
+				2E4007DE2389420C0083F1BD /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2E4007B623893F970083F1BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E4007B723893F970083F1BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2E4007BB23893F980083F1BD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E4007BC23893F980083F1BD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2E4007BF23893F980083F1BD /* Debug */ = {
@@ -280,9 +462,12 @@
 		};
 		2E4007C223893F980083F1BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9338Z8FQLT;
 				INFOPLIST_FILE = JadwalSholat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,16 +475,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = id.co.codelatos.JadwalSholat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2E4007C323893F980083F1BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9338Z8FQLT;
 				INFOPLIST_FILE = JadwalSholat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,8 +496,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = id.co.codelatos.JadwalSholat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
