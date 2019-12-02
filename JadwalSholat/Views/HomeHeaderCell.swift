@@ -26,7 +26,7 @@ class HomeHeaderCell: UITableViewCell {
         return label
     }()
 
-    private lazy var exactTimeLabel: UILabel = {
+    lazy var exactTimeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 50)

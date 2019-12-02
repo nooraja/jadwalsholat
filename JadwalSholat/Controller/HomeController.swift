@@ -81,9 +81,10 @@ class HomeController: UITableViewController {
 
         RunLoop.current.add(myTimer, forMode: RunLoop.Mode.common)
         
-        if let data = viewModel?.getDetailJadwalHeaderViewModel() {
-            cell.bind(exactTime: testingLabel())
-        }
+//        if let data = viewModel?.getDetailJadwalHeaderViewModel() {
+//            cell.bind(exactTime: testingLabel())
+//        }
+        cell.exactTimeLabel.text = testingLabel()
         
         return cell
     }
@@ -91,11 +92,6 @@ class HomeController: UITableViewController {
     @objc func testingLabel() -> String {
         testingsaja = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .long)
         return testingsaja
-    }
-    
-    
-    @objc func updateTime() {
-        DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .full)
     }
     
     private func createInfoCell(for indexPath: IndexPath) -> AppCell {
