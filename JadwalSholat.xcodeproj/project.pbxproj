@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E2B0BC023928E1000CCB16C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2B0BBF23928E1000CCB16C /* Result.swift */; };
 		2E4007B323893F970083F1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007B223893F970083F1BD /* AppDelegate.swift */; };
 		2E4007BA23893F980083F1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E4007B923893F980083F1BD /* Assets.xcassets */; };
 		2E4007C6238941800083F1BD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007C5238941800083F1BD /* HomeController.swift */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JadwalSholat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E2B0BBF23928E1000CCB16C /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		2E4007AF23893F970083F1BD /* JadwalSholat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JadwalSholat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4007B223893F970083F1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4007B923893F980083F1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				2E4007CE238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift */,
 				2E4007C9238941EB0083F1BD /* UIView+Anchor.swift */,
 				2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */,
-				2E2B0BBF23928E1000CCB16C /* Result.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 				2E4007EF2389429C0083F1BD /* JadwalViewModel.swift in Sources */,
 				2E4007E72389426A0083F1BD /* StarshipsListCellBackground.swift in Sources */,
 				2E4007F423894DE60083F1BD /* SplashController+CLLocationManager.swift in Sources */,
-				2E2B0BC023928E1000CCB16C /* Result.swift in Sources */,
 				2E4007D4238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				2E4007D1238941EC0083F1BD /* UIColor+String.swift in Sources */,
 				2E4007DC2389420C0083F1BD /* Provider.swift in Sources */,

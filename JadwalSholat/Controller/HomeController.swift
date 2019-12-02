@@ -89,7 +89,7 @@ class HomeController: UITableViewController {
     }
     
     @objc func testingLabel() -> String {
-        testingsaja = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .short)
+        testingsaja = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .long)
         return testingsaja
     }
     
