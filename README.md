@@ -1,4 +1,4 @@
-# Jadwal Sholat
+# Jam Sholat
 
 ### Description
 *Jam Sholat* is iOS app based on MVVM(Model-View-ViewModel) software architecture pattern & using RxSwift
