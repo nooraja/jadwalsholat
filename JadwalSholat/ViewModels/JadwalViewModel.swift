@@ -49,7 +49,8 @@ final class JadwalViewModel {
 
         networkModel?.retreiveJadwal(city: name).subscribe(onNext: { [weak self] (jadwal: Jadwal) in
 
-			guard let times = jadwal.results.datetime.first?.times else {
+			guard let times = jadwal.results.datetime.first?.times,
+                let date = jadwal.results.datetime.first?.date.gregorian else {
 				return
 			}
 
@@ -63,7 +64,7 @@ final class JadwalViewModel {
                 JadwalCellViewModel(time: times.midnight, icon: self?.listIcons[6], pray: self?.nameOfPray[6])
 				])
 
-            self?.jadwalHeaderViewModel = JadwalHeaderViewModel(name: name)
+            self?.jadwalHeaderViewModel = JadwalHeaderViewModel(name: name, date: date)
 
 			self?.reloadDataSubject.onNext(())
 

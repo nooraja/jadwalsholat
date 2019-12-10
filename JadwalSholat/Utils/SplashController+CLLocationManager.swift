@@ -35,8 +35,8 @@ extension SplashController: CLLocationManagerDelegate {
                 
                 if pm.count > 0 {
                     
-                    let subAdmin = placemarks?.first?.administrativeArea
-                    self.province = subAdmin
+                    let province = placemarks?.first?.administrativeArea
+                    self.province = province
                 }
         })
     }

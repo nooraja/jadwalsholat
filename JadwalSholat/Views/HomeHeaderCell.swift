@@ -10,42 +10,26 @@ import UIKit
 
 class HomeHeaderCell: UITableViewCell {
 
-    private lazy var georgeCalendarLabel: UILabel = {
+    private lazy var dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 24)
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 
         return label
     }()
-    
-    private lazy var IslamicCalendarLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        return label
-    }()
 
-    lazy var exactTimeLabel: UILabel = {
+    private lazy var exactTimeLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.font = UIFont.boldSystemFont(ofSize: 50)
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
 
         return label
     }()
     
-    private lazy var todayLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        return label
-    }()
-    
     private lazy var detailPlaceLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 24)
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         
         return label
@@ -74,31 +58,25 @@ class HomeHeaderCell: UITableViewCell {
                         bottom: contentView.bottomAnchor, right: contentView.rightAnchor,
                         paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: 0, height: 0 )
         
-        cellView.addSubview(georgeCalendarLabel)
-        cellView.addSubview(IslamicCalendarLabel)
+        cellView.addSubview(dateLabel)
         cellView.addSubview(exactTimeLabel)
-        cellView.addSubview(todayLabel)
         cellView.addSubview(detailPlaceLabel)
         
-        georgeCalendarLabel.anchor(top: cellView.topAnchor, left: cellView.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 20)
-        georgeCalendarLabel.text = "27 November 2019"
-        
-        IslamicCalendarLabel.anchor(top: cellView.topAnchor, left: nil, bottom: nil, right: cellView.rightAnchor, paddingTop: 8, paddingLeft: 0, paddingBottom: 0, paddingRight: 8, width: 0, height: 20)
-        IslamicCalendarLabel.text = "30 Rabiul Awal 1441"
+        detailPlaceLabel.anchor(top: cellView.topAnchor, left: cellView.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
         
         exactTimeLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: nil, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 40)
         exactTimeLabel.centerXAnchor.constraint(equalTo: cellView.centerXAnchor).isActive = true
         exactTimeLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
         
-        todayLabel.text = "Hari Kamis"
-        todayLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: cellView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 8, paddingBottom: 8, paddingRight: 0, width: 0, height: 20)
         
-        detailPlaceLabel.text = "Kalibata, Kecamatan Pancoran"
-        detailPlaceLabel.anchor(top: nil, left: nil, bottom: cellView.bottomAnchor, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 8, paddingRight: 8, width: 0, height: 20)
+        dateLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: cellView.bottomAnchor, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: 0, height: 30)
     }
 
-	func bind(exactTime: String) {
-        exactTimeLabel.text = exactTime
+    func bind(time: String, viewModel: JadwalHeaderViewModel) {
+        
+        exactTimeLabel.text = time
+        detailPlaceLabel.text = viewModel.name
+        dateLabel.text = viewModel.date?.toFormatterDate(from: "yyyy-MM-dd", to: "EEEE, d MMMM yyyy")
 	}
     
 	required init?(coder aDecoder: NSCoder) {

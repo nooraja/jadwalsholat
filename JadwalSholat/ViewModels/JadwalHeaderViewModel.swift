@@ -10,4 +10,5 @@ import Foundation
 
 struct JadwalHeaderViewModel {
 	let name: String?
+    let date: String?
 }

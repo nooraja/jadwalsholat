@@ -65,7 +65,7 @@ class SplashController: UIViewController {
 
             self?.present(
                 HomeController(viewModel:
-                    JadwalViewModel(networkModel: JadwalNetworkModel(), name: province)), animated: false,completion: nil)
+                    JadwalViewModel(networkModel: JadwalNetworkModel(), name: province), province: province), animated: false,completion: nil)
         }
     }
 }

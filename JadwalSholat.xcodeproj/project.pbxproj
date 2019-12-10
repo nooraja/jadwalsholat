@@ -29,6 +29,7 @@
 		2E4007EE2389429C0083F1BD /* JadwalHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */; };
 		2E4007EF2389429C0083F1BD /* JadwalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EC2389429C0083F1BD /* JadwalViewModel.swift */; };
 		2E4007F423894DE60083F1BD /* SplashController+CLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */; };
+		2E646703239505AC009C9510 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E646702239505AC009C9510 /* String+DateFormatter.swift */; };
 		2EE32C0E238BCDD4004BDC22 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE32C0D238BCDD4004BDC22 /* SplashController.swift */; };
 		9365E9BC4044B9D987AE1014 /* Pods_JadwalSholat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalHeaderViewModel.swift; sourceTree = "<group>"; };
 		2E4007EC2389429C0083F1BD /* JadwalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalViewModel.swift; sourceTree = "<group>"; };
 		2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashController+CLLocationManager.swift"; sourceTree = "<group>"; };
+		2E646702239505AC009C9510 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
 		2EE32C0D238BCDD4004BDC22 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.debug.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.debug.xcconfig"; sourceTree = "<group>"; };
 		BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.release.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				2E4007CE238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift */,
 				2E4007C9238941EB0083F1BD /* UIView+Anchor.swift */,
 				2E4007F323894DE60083F1BD /* SplashController+CLLocationManager.swift */,
+				2E646702239505AC009C9510 /* String+DateFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				2E4007E62389426A0083F1BD /* AppCell.swift in Sources */,
 				2E4007EF2389429C0083F1BD /* JadwalViewModel.swift in Sources */,
 				2E4007E72389426A0083F1BD /* StarshipsListCellBackground.swift in Sources */,
+				2E646703239505AC009C9510 /* String+DateFormatter.swift in Sources */,
 				2E4007F423894DE60083F1BD /* SplashController+CLLocationManager.swift in Sources */,
 				2E4007D4238941EC0083F1BD /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				2E4007D1238941EC0083F1BD /* UIColor+String.swift in Sources */,

@@ -14,6 +14,7 @@ class HomeController: UITableViewController {
     
     var eJadwal: Jadwal?
     var province: String?
+    var myTimer = Timer()
     
     private var viewModel: JadwalViewModel?
     private let disposeBag = DisposeBag()
@@ -41,11 +42,16 @@ class HomeController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)]
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        myTimer.invalidate()
+    }
 
-    convenience init(viewModel: JadwalViewModel) {
+    convenience init(viewModel: JadwalViewModel, province: String) {
         self.init()
         
         self.viewModel = viewModel
+        self.province = province
         bindViewModel()
     }
     
@@ -77,21 +83,19 @@ class HomeController: UITableViewController {
         
         let cell =  tableView.dequeueReusableCell(for: indexPath) as HomeHeaderCell
         
-        let myTimer = Timer(timeInterval: 0.5, target: self, selector: #selector(testingLabel), userInfo: nil, repeats: true)
+        myTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
+            
+            let currentTime = DateFormatter.localizedString(from: Date().addingTimeInterval(0.5), dateStyle: .none, timeStyle: .short)
 
-        RunLoop.current.add(myTimer, forMode: RunLoop.Mode.common)
+            if let data = self.viewModel?.getDetailJadwalHeaderViewModel() {
+                cell.bind(time: currentTime, viewModel: data)
+            }
+
+        }
         
-//        if let data = viewModel?.getDetailJadwalHeaderViewModel() {
-//            cell.bind(exactTime: testingLabel())
-//        }
-        cell.exactTimeLabel.text = testingLabel()
-        
+        RunLoop.current.add(myTimer, forMode: .common)
+
         return cell
-    }
-    
-    @objc func testingLabel() -> String {
-        testingsaja = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .long)
-        return testingsaja
     }
     
     private func createInfoCell(for indexPath: IndexPath) -> AppCell {
@@ -122,7 +126,7 @@ class HomeController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return self.view.frame.height * 0.35
+            return self.view.frame.height * 0.2
         case 1:
             return ((self.view.frame.height) * 0.7 ) / 8 - 16
         default:
