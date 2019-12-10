@@ -16,5 +16,5 @@ Make sure you have XCode installed from the App Store. The run the following com
 clone https://github.com/nooraja/jadwalsholat.git
 cd jadwalsholat
 pod install
-open jadwalholatxcworkspace
+open jadwalsholat.xcworkspace
 ```
