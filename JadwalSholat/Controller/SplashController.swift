@@ -52,20 +52,15 @@ class SplashController: UIViewController {
         locManager.delegate = self
         locManager.requestWhenInUseAuthorization()
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 9, *) {
-            locManager.allowsBackgroundLocationUpdates = true
-        }
-        locManager.startUpdatingLocation()
+//        locManager.startUpdatingLocation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) { [weak self] in
-
-            guard let province = self?.province else {
-                return
-            }
-
-            self?.present(
-                HomeController(viewModel:
-                    JadwalViewModel(networkModel: JadwalNetworkModel(), name: province), province: province), animated: false,completion: nil)
+        if #available(iOS 9, *) {
+            locManager.allowsBackgroundLocationUpdates = false
         }
+        locManager.stopUpdatingLocation()
     }
 }

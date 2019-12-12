@@ -12,12 +12,18 @@ import UIKit
 
 class HomeController: UITableViewController {
     
+    //MARK:- Public Property
+
     var eJadwal: Jadwal?
     var province: String?
     var myTimer = Timer()
     
+    //MARK:- Private Property
+
     private var viewModel: JadwalViewModel?
     private let disposeBag = DisposeBag()
+    
+    //MARK:- Public Method
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +48,7 @@ class HomeController: UITableViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)]
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         myTimer.invalidate()
     }
@@ -54,7 +60,7 @@ class HomeController: UITableViewController {
         self.province = province
         bindViewModel()
     }
-    
+
     func bindViewModel() {
         
         viewModel?.reloadDataObservable.subscribe(onNext: { [weak self] in
@@ -78,7 +84,9 @@ class HomeController: UITableViewController {
         
         return count
     }
-    var testingsaja: String = ""
+
+    //MARK:- Private Method
+
     private func createHeaderCell(for indexPath: IndexPath) -> HomeHeaderCell {
         
         let cell =  tableView.dequeueReusableCell(for: indexPath) as HomeHeaderCell
@@ -109,6 +117,12 @@ class HomeController: UITableViewController {
         return cell
     }
     
+}
+
+extension HomeController {
+    
+    //MARK:- TableViewDataSource & TableViewDelegate
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch JadwalViewModel.Section(rawValue: indexPath.section) {

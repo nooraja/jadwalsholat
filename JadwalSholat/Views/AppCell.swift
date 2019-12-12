@@ -9,8 +9,10 @@
 import UIKit
 
 class AppCell: UITableViewCell {
+
+    //MARK:- Private Property
     
-    lazy var iconOfPray: UIImageView = {
+    private lazy var iconOfPray: UIImageView = {
         
         let image = UIImageView()
         image.contentMode = .scaleAspectFill
@@ -21,7 +23,7 @@ class AppCell: UITableViewCell {
         return image
     }()
     
-    lazy var nameOfPrayLabel: UILabel = {
+    private lazy var nameOfPrayLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -29,7 +31,7 @@ class AppCell: UITableViewCell {
         return label
     }()
     
-    lazy var timeToPrayLabel: UILabel = {
+    private lazy var timeToPrayLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -37,6 +39,8 @@ class AppCell: UITableViewCell {
         return label
     }()
 
+    //MARK:- Public Method
+    
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
         

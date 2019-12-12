@@ -9,6 +9,8 @@
 import UIKit
 
 class StarshipsListCellBackground: UIView {
+    
+    //MARK:- Public Method
 
 	override func draw(_ rect: CGRect) {
 
@@ -22,20 +24,5 @@ class StarshipsListCellBackground: UIView {
 			startingWith: UIColor.telegramBlue.cgColor,
 			finishingWith: UIColor.telegramWhite.cgColor
 		)
-
-//        let strokeRect = backgroundRect.insetBy(dx: 4.5, dy: 4.5)
-//        context.setStrokeColor(UIColor.telegramWhite.cgColor)
-//        context.setLineWidth(1)
-//        context.stroke(strokeRect)
-	}
-
-	// ... many lines later
-
-	func drawBlueCircle(in context: CGContext) {
-		context.saveGState()
-		context.setFillColor(UIColor.telegramWhite.cgColor)
-		context.addEllipse(in: bounds)
-		context.drawPath(using: .fill)
-		context.restoreGState()
 	}
 }

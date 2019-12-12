@@ -27,24 +27,31 @@ extension SplashController: CLLocationManagerDelegate {
         let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
         
         ceo.reverseGeocodeLocation(loc, completionHandler:
-            {(placemarks, error) in
+            { [weak self] (placemarks, error)  in
                 if (error != nil) {
                     print("reverse geodcode fail: \(error!.localizedDescription)")
                 }
+
                 guard let pm = placemarks else { return }
                 
                 if pm.count > 0 {
                     
-                    let province = placemarks?.first?.administrativeArea
-                    self.province = province
+                    self?.province = placemarks?.first?.administrativeArea
+                    
+                    guard let province = self?.province else {
+                        return
+                    }
+                    
+                    self?.present(
+                        HomeController(viewModel:
+                            JadwalViewModel(networkModel: JadwalNetworkModel(), name: province), province: province), animated: false,completion: nil)
+                    
                 }
         })
     }
     
     private func updateLoc() {
         if isUpdatingLocation {
-            locManager.delegate = self
-            locManager.desiredAccuracy = kCLLocationAccuracyBest
             if CLLocationManager.authorizationStatus() == .notDetermined {
                 locManager.requestWhenInUseAuthorization()
             }else{
@@ -67,8 +74,8 @@ extension SplashController: CLLocationManagerDelegate {
         currentLocation = locations.first!
         
         print("Got It location: \(locations.description)")
-        DispatchQueue.main.async {
-            self.getAddressFromLatLon(pdblLatitude: "\(self.currentLocation.coordinate.latitude )", withLongitude: "\(self.currentLocation.coordinate.longitude)")
+        DispatchQueue.main.async { [weak self] in
+            self?.getAddressFromLatLon(pdblLatitude: "\(self?.currentLocation.coordinate.latitude ?? 0.0 )", withLongitude: "\(self?.currentLocation.coordinate.longitude ?? 0.0)")
         }
         
     }
@@ -78,9 +85,9 @@ extension SplashController: CLLocationManagerDelegate {
         if status == .notDetermined {
             print("Req Auth")
             locManager.requestWhenInUseAuthorization()
-        }else if status == .denied || status == .restricted {
+        } else if status == .denied || status == .restricted {
             print("Denied or Restricted")
-        }else {
+        } else {
             updateLoc()
             locManager.startUpdatingLocation()
         }

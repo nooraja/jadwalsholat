@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeHeaderCell: UITableViewCell {
+    
+    //MARK:- Private Property
 
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
@@ -42,6 +44,8 @@ class HomeHeaderCell: UITableViewCell {
         return vw
     }()
     
+    //MARK:- Public Method
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -50,6 +54,19 @@ class HomeHeaderCell: UITableViewCell {
         
         setupUI()
 	}
+    
+    func bind(time: String, viewModel: JadwalHeaderViewModel) {
+        
+        exactTimeLabel.text = time
+        detailPlaceLabel.text = viewModel.name
+        dateLabel.text = viewModel.date?.toFormatterDate(from: "yyyy-MM-dd", to: "EEEE, d MMMM yyyy")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK:- Private Property
     
     fileprivate func setupUI() {
         contentView.addSubview(cellView)
@@ -71,17 +88,6 @@ class HomeHeaderCell: UITableViewCell {
         
         dateLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: cellView.bottomAnchor, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: 0, height: 30)
     }
-
-    func bind(time: String, viewModel: JadwalHeaderViewModel) {
-        
-        exactTimeLabel.text = time
-        detailPlaceLabel.text = viewModel.name
-        dateLabel.text = viewModel.date?.toFormatterDate(from: "yyyy-MM-dd", to: "EEEE, d MMMM yyyy")
-	}
-    
-	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
 
 }
 
