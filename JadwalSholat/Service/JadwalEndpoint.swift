@@ -10,6 +10,7 @@ import Foundation
 
 enum JadwalEndpoint {
 	case jadwal(name: String)
+    case jadwalList(lat: String, long: String)
 }
 
 extension JadwalEndpoint: EndpointType {
@@ -24,7 +25,7 @@ extension JadwalEndpoint: EndpointType {
 
 	var path: String {
 		switch self {
-		case .jadwal:
+		case .jadwal, .jadwalList(_, _):
 			return "/v2/times/today.json?"
 		}
 	}
@@ -33,6 +34,12 @@ extension JadwalEndpoint: EndpointType {
 		switch self {
 		case .jadwal(let name):
 			return ["city" : name]
+        case .jadwalList(let lat, let long):
+            return [
+                "latitude" : lat,
+                "longitude" : long,
+                "elevation": 333
+            ]
 		}
 	}
 }

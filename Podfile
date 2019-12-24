@@ -6,8 +6,6 @@ target 'JadwalSholat' do
   use_frameworks!
 
   # Pods for JadwalSholat
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
 
 
 end

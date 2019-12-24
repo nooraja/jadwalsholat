@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class SplashController: UIViewController {
+class SplashController: UIViewController, CLLocationManagerDelegate {
     
     var locManager = CLLocationManager()
     var province: String?
@@ -52,7 +52,6 @@ class SplashController: UIViewController {
         locManager.delegate = self
         locManager.requestWhenInUseAuthorization()
         locManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locManager.startUpdatingLocation()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -62,5 +61,90 @@ class SplashController: UIViewController {
             locManager.allowsBackgroundLocationUpdates = false
         }
         locManager.stopUpdatingLocation()
+    }
+}
+
+extension SplashController {
+    func stopLocationManager() {
+        locManager.stopUpdatingLocation()
+    }
+    
+    func getAddressFromLatLon(latitude: String, longitude: String) {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let lat: Double = Double("\(latitude)")!
+        let lon: Double = Double("\(longitude)")!
+        
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = lat
+        center.longitude = lon
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            { [weak self] (placemarks, error)  in
+                if (error != nil) {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                
+                guard let pm = placemarks else { return }
+                
+                if pm.count > 0 {
+                    
+                    self?.province = placemarks?.first?.administrativeArea
+                    
+                    guard let province = self?.province else {
+                        return
+                    }
+                    
+                    self?.present(JadwalController(viewModel: JadwalViewModelV2(networkModel: JadwalNetworkModelV2())), animated: false, completion: nil)
+                    
+                }
+        })
+    }
+    
+    private func updateLoc() {
+        if isUpdatingLocation {
+            if CLLocationManager.authorizationStatus() == .notDetermined {
+                locManager.requestWhenInUseAuthorization()
+            }else{
+                locManager.startUpdatingLocation()
+            }
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("ERROR!! locationManager-didFailWithError: \(error)")
+        if (error as NSError).code == CLError.locationUnknown.rawValue {
+            return
+        }
+
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        currentLocation = locations.first!
+
+        print("Got It location: \(locations.description)")
+        DispatchQueue.main.async { [weak self] in
+            self?.getAddressFromLatLon(latitude: "\(self?.currentLocation.coordinate.latitude ?? 0.0 )", longitude: "\(self?.currentLocation.coordinate.longitude ?? 0.0)")
+        }
+    }
+    
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        switch status {
+        case .restricted, .denied:
+            print("Denied or Restricted")
+            DispatchQueue.main.async { [weak self] in
+                self?.getAddressFromLatLon(latitude: "-6.175510", longitude: "106.827164") // monass
+            }
+        case .authorizedWhenInUse, .authorizedAlways:
+            print("Req Auth")
+            updateLoc()
+        case .notDetermined:
+            print("Req Auth")
+            locManager.requestWhenInUseAuthorization()
+        }
     }
 }
