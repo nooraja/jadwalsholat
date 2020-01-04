@@ -27,9 +27,6 @@ final class JadwalViewModel {
     private let networkModel: JadwalNetworkModel?
     
     var changeHandler: ((JadwalViewModelChange) -> Void)?
-    var reloadHandler: () -> Void? {
-        return reloadJadwal
-    }
 
     private let listIcons: [String] = ["clock", "sunrise", "sun", "loader", "sunset", "moon", "message"]
     private let nameOfPray: [String] = ["Subuh", "Shurooq", "Dhuhur", "Ashar", "Magrib", "Isya", "Tengah Malam"]
@@ -38,7 +35,6 @@ final class JadwalViewModel {
         self.networkModel = networkModel
         fetchJadwal(lat: "4.180220", long: "97.491173")
     }
-    
     
     func reloadJadwal() {
         fetchJadwal(lat: "46.079747", long: "2.911622")
@@ -68,7 +64,7 @@ final class JadwalViewModel {
                         return
                 }
 
-                self.jadwalDetailViewModel.append(contentsOf: [
+                self.jadwalDetailViewModel = [
                     JadwalCellViewModel(time: times.fajr,       icon: self.listIcons[0], pray: self.nameOfPray[0]),
                     JadwalCellViewModel(time: times.imsak,      icon: self.listIcons[1], pray: self.nameOfPray[1]),
                     JadwalCellViewModel(time: times.dhuhr,      icon: self.listIcons[2], pray: self.nameOfPray[2]),
@@ -76,7 +72,7 @@ final class JadwalViewModel {
                     JadwalCellViewModel(time: times.maghrib,    icon: self.listIcons[4], pray: self.nameOfPray[4]),
                     JadwalCellViewModel(time: times.isha,       icon: self.listIcons[5], pray: self.nameOfPray[5]),
                     JadwalCellViewModel(time: times.midnight,   icon: self.listIcons[6], pray: self.nameOfPray[6])
-                    ])
+                    ]
 
                 self.jadwalHeaderViewModel = JadwalHeaderViewModel(name: timezone, date: date)
 

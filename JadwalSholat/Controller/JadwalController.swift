@@ -10,12 +10,14 @@ import UIKit
 
 class JadwalController: UITableViewController {
     
-    var province: String?
-    var myTimer = Timer()
+    //MARK:- Public Property
     
+    var province: String?
+
     //MARK:- Private Property
     
     private var viewModel: JadwalViewModel?
+    private var myTimer = Timer()
     
     override func viewDidDisappear(_ animated: Bool) {
         myTimer.invalidate()
@@ -52,6 +54,16 @@ class JadwalController: UITableViewController {
         self.viewModel = viewModel
         self.province = province
         bindViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     func bindViewModel() {
@@ -97,6 +109,10 @@ class JadwalController: UITableViewController {
                 cell.bind(time: currentTime, viewModel: data)
             }
             
+        }
+        
+        cell.reloadButtonTapped = { [weak self] in
+            self?.viewModel?.reloadJadwal()
         }
         
         RunLoop.current.add(myTimer, forMode: .common)

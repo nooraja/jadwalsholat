@@ -30,6 +30,7 @@
 		2E69A78F23ABAF5300E11D97 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78E23ABAF5300E11D97 /* NetworkModel.swift */; };
 		2E69A79123ABB18D00E11D97 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A79023ABB18D00E11D97 /* URLRequest.swift */; };
 		2E69A79323ABBD2A00E11D97 /* JadwalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A79223ABBD2A00E11D97 /* JadwalController.swift */; };
+		2E93F55D23C06D6600570494 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E93F55C23C06D6600570494 /* MainTabController.swift */; };
 		2EE32C0E238BCDD4004BDC22 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE32C0D238BCDD4004BDC22 /* SplashController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		2E69A78E23ABAF5300E11D97 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		2E69A79023ABB18D00E11D97 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		2E69A79223ABBD2A00E11D97 /* JadwalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalController.swift; sourceTree = "<group>"; };
+		2E93F55C23C06D6600570494 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 		2EE32C0D238BCDD4004BDC22 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			children = (
 				2E69A79223ABBD2A00E11D97 /* JadwalController.swift */,
 				2EE32C0D238BCDD4004BDC22 /* SplashController.swift */,
+				2E93F55C23C06D6600570494 /* MainTabController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				2E4007DF2389420C0083F1BD /* EndpointType.swift in Sources */,
 				2E4007D0238941EC0083F1BD /* UITableView+Register.swift in Sources */,
+				2E93F55D23C06D6600570494 /* MainTabController.swift in Sources */,
 				2E4007E02389420C0083F1BD /* JadwalEndpoint.swift in Sources */,
 				2E4007B323893F970083F1BD /* AppDelegate.swift in Sources */,
 				2E4007D2238941EC0083F1BD /* CGContextExtensions.swift in Sources */,

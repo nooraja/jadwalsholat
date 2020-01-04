@@ -91,12 +91,8 @@ extension SplashController {
                 if pm.count > 0 {
                     
                     self?.province = placemarks?.first?.administrativeArea
-                    
-                    guard let province = self?.province else {
-                        return
-                    }
 
-                    let viewController = JadwalController(viewModel: JadwalViewModel(networkModel: JadwalNetworkModel()))
+                    let viewController = MainTabController()
                     viewController.modalPresentationStyle = .fullScreen
                     self?.present(viewController, animated: false, completion: nil)
                 }

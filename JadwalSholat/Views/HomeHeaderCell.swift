@@ -14,7 +14,9 @@ enum RefreshJadwalTable {
 
 class HomeHeaderCell: UITableViewCell {
     
-    private var viewModel =  JadwalViewModel(networkModel: JadwalNetworkModel())
+    //MARK:- Public Property
+    
+    var reloadButtonTapped: (() -> Void?) = ({})
     
     //MARK:- Private Property
 
@@ -107,7 +109,7 @@ class HomeHeaderCell: UITableViewCell {
     }
     
     @objc func handleRefresh() {
-        viewModel.reloadJadwal()
+        reloadButtonTapped()
     }
 
 }
