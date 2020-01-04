@@ -96,7 +96,7 @@ extension SplashController {
                         return
                     }
 
-                    let viewController = JadwalController(viewModel: JadwalViewModelV2(networkModel: JadwalNetworkModelV2()))
+                    let viewController = JadwalController(viewModel: JadwalViewModel(networkModel: JadwalNetworkModel()))
                     viewController.modalPresentationStyle = .fullScreen
                     self?.present(viewController, animated: false, completion: nil)
                 }

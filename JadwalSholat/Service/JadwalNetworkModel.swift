@@ -1,5 +1,5 @@
 //
-//  JadwalNetworkModelV2.swift
+//  JadwalNetworkModel.swift
 //  JadwalSholat
 //
 //  Created by NOOR on 19/12/19.
@@ -34,7 +34,7 @@ enum Result<T, U: Error> {
     case failure(U)
 }
 
-final class JadwalNetworkModelV2: NetworkModel {
+final class JadwalNetworkModel: NetworkModel {
     
     override init() {
         

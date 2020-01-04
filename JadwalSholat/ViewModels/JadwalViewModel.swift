@@ -1,5 +1,5 @@
 //
-//  JadwalViewModelV2.swift
+//  JadwalViewModel.swift
 //  JadwalSholat
 //
 //  Created by NOOR on 19/12/19.
@@ -14,7 +14,7 @@ enum JadwalViewModelChange {
     case didChangeNetworkActivityStatus(Bool)
 }
 
-final class JadwalViewModelV2 {
+final class JadwalViewModel {
     
     enum Section: Int {
         case header
@@ -24,16 +24,24 @@ final class JadwalViewModelV2 {
     private var jadwalDetailViewModel = [JadwalCellViewModel]()
     private var jadwalHeaderViewModel: JadwalHeaderViewModel?
     
-    private let networkModel: JadwalNetworkModelV2?
+    private let networkModel: JadwalNetworkModel?
     
     var changeHandler: ((JadwalViewModelChange) -> Void)?
-    
+    var reloadHandler: () -> Void? {
+        return reloadJadwal
+    }
+
     private let listIcons: [String] = ["clock", "sunrise", "sun", "loader", "sunset", "moon", "message"]
     private let nameOfPray: [String] = ["Subuh", "Shurooq", "Dhuhur", "Ashar", "Magrib", "Isya", "Tengah Malam"]
     
-    init(networkModel: JadwalNetworkModelV2) {
+    init(networkModel: JadwalNetworkModel) {
         self.networkModel = networkModel
         fetchJadwal(lat: "4.180220", long: "97.491173")
+    }
+    
+    
+    func reloadJadwal() {
+        fetchJadwal(lat: "46.079747", long: "2.911622")
     }
     
     func fetchJadwal(lat: String, long: String) {

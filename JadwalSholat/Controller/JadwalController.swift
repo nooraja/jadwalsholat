@@ -15,7 +15,7 @@ class JadwalController: UITableViewController {
     
     //MARK:- Private Property
     
-    private var viewModel: JadwalViewModelV2?
+    private var viewModel: JadwalViewModel?
     
     override func viewDidDisappear(_ animated: Bool) {
         myTimer.invalidate()
@@ -46,7 +46,7 @@ class JadwalController: UITableViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)]
     }
     
-    convenience init(viewModel: JadwalViewModelV2) {
+    convenience init(viewModel: JadwalViewModel) {
         self.init()
         
         self.viewModel = viewModel
@@ -136,7 +136,7 @@ extension JadwalController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch JadwalViewModelV2.Section(rawValue: indexPath.section) {
+        switch JadwalViewModel.Section(rawValue: indexPath.section) {
         case .some(.header):
             return createHeaderCell(for: indexPath)
             

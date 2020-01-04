@@ -25,8 +25,8 @@
 		2E4007ED2389429C0083F1BD /* JadwalCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */; };
 		2E4007EE2389429C0083F1BD /* JadwalHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */; };
 		2E646703239505AC009C9510 /* String+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E646702239505AC009C9510 /* String+DateFormatter.swift */; };
-		2E69A78B23ABA1EF00E11D97 /* JadwalViewModelV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78A23ABA1EF00E11D97 /* JadwalViewModelV2.swift */; };
-		2E69A78D23ABA23B00E11D97 /* JadwalNetworkModelV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78C23ABA23B00E11D97 /* JadwalNetworkModelV2.swift */; };
+		2E69A78B23ABA1EF00E11D97 /* JadwalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78A23ABA1EF00E11D97 /* JadwalViewModel.swift */; };
+		2E69A78D23ABA23B00E11D97 /* JadwalNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78C23ABA23B00E11D97 /* JadwalNetworkModel.swift */; };
 		2E69A78F23ABAF5300E11D97 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A78E23ABAF5300E11D97 /* NetworkModel.swift */; };
 		2E69A79123ABB18D00E11D97 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A79023ABB18D00E11D97 /* URLRequest.swift */; };
 		2E69A79323ABBD2A00E11D97 /* JadwalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69A79223ABBD2A00E11D97 /* JadwalController.swift */; };
@@ -34,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JadwalSholat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4007AF23893F970083F1BD /* JadwalSholat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JadwalSholat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4007B223893F970083F1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4007B923893F980083F1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,14 +54,12 @@
 		2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalCellViewModel.swift; sourceTree = "<group>"; };
 		2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JadwalHeaderViewModel.swift; sourceTree = "<group>"; };
 		2E646702239505AC009C9510 /* String+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DateFormatter.swift"; sourceTree = "<group>"; };
-		2E69A78A23ABA1EF00E11D97 /* JadwalViewModelV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalViewModelV2.swift; sourceTree = "<group>"; };
-		2E69A78C23ABA23B00E11D97 /* JadwalNetworkModelV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalNetworkModelV2.swift; sourceTree = "<group>"; };
+		2E69A78A23ABA1EF00E11D97 /* JadwalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalViewModel.swift; sourceTree = "<group>"; };
+		2E69A78C23ABA23B00E11D97 /* JadwalNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalNetworkModel.swift; sourceTree = "<group>"; };
 		2E69A78E23ABAF5300E11D97 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		2E69A79023ABB18D00E11D97 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		2E69A79223ABBD2A00E11D97 /* JadwalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JadwalController.swift; sourceTree = "<group>"; };
 		2EE32C0D238BCDD4004BDC22 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
-		8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.debug.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.debug.xcconfig"; sourceTree = "<group>"; };
-		BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JadwalSholat.release.xcconfig"; path = "Target Support Files/Pods-JadwalSholat/Pods-JadwalSholat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +78,6 @@
 			children = (
 				2E4007B123893F970083F1BD /* JadwalSholat */,
 				2E4007B023893F970083F1BD /* Products */,
-				CC9730D33DE49220A293BE96 /* Pods */,
-				DFA2BAD7784F415485A09A65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +125,7 @@
 				2E4007D82389420C0083F1BD /* APIError.swift */,
 				2E4007D92389420C0083F1BD /* EndpointType.swift */,
 				2E4007DA2389420C0083F1BD /* JadwalEndpoint.swift */,
-				2E69A78C23ABA23B00E11D97 /* JadwalNetworkModelV2.swift */,
+				2E69A78C23ABA23B00E11D97 /* JadwalNetworkModel.swift */,
 				2E69A78E23ABAF5300E11D97 /* NetworkModel.swift */,
 				2E69A79023ABB18D00E11D97 /* URLRequest.swift */,
 			);
@@ -152,7 +147,7 @@
 			children = (
 				2E4007EA2389429C0083F1BD /* JadwalCellViewModel.swift */,
 				2E4007EB2389429C0083F1BD /* JadwalHeaderViewModel.swift */,
-				2E69A78A23ABA1EF00E11D97 /* JadwalViewModelV2.swift */,
+				2E69A78A23ABA1EF00E11D97 /* JadwalViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -174,23 +169,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CC9730D33DE49220A293BE96 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */,
-				BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DFA2BAD7784F415485A09A65 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				185F871C2ECB8B8C13370750 /* Pods_JadwalSholat.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,7 +176,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4007C123893F980083F1BD /* Build configuration list for PBXNativeTarget "JadwalSholat" */;
 			buildPhases = (
-				6A190D3151869893E0052BE1 /* [CP] Check Pods Manifest.lock */,
 				2E4007AB23893F970083F1BD /* Sources */,
 				2E4007AC23893F970083F1BD /* Frameworks */,
 				2E4007AD23893F970083F1BD /* Resources */,
@@ -261,31 +238,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		6A190D3151869893E0052BE1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JadwalSholat-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2E4007AB23893F970083F1BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,7 +251,7 @@
 				2EE32C0E238BCDD4004BDC22 /* SplashController.swift in Sources */,
 				2E4007C8238941B20083F1BD /* Jadwal.swift in Sources */,
 				2E4007E82389426A0083F1BD /* HomeHeaderCell.swift in Sources */,
-				2E69A78B23ABA1EF00E11D97 /* JadwalViewModelV2.swift in Sources */,
+				2E69A78B23ABA1EF00E11D97 /* JadwalViewModel.swift in Sources */,
 				2E4007E62389426A0083F1BD /* AppCell.swift in Sources */,
 				2E4007E72389426A0083F1BD /* StarshipsListCellBackground.swift in Sources */,
 				2E646703239505AC009C9510 /* String+DateFormatter.swift in Sources */,
@@ -310,7 +262,7 @@
 				2E69A79323ABBD2A00E11D97 /* JadwalController.swift in Sources */,
 				2E4007EE2389429C0083F1BD /* JadwalHeaderViewModel.swift in Sources */,
 				2E4007D3238941EC0083F1BD /* UITableView+Dequeing.swift in Sources */,
-				2E69A78D23ABA23B00E11D97 /* JadwalNetworkModelV2.swift in Sources */,
+				2E69A78D23ABA23B00E11D97 /* JadwalNetworkModel.swift in Sources */,
 				2E4007ED2389429C0083F1BD /* JadwalCellViewModel.swift in Sources */,
 				2E4007CF238941EC0083F1BD /* UIView+Anchor.swift in Sources */,
 				2E4007DE2389420C0083F1BD /* APIError.swift in Sources */,
@@ -438,7 +390,6 @@
 		};
 		2E4007C223893F980083F1BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AFD6477F56111A780C295BC /* Pods-JadwalSholat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -449,6 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = id.co.codelatos.JadwalSholat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -459,7 +411,6 @@
 		};
 		2E4007C323893F980083F1BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF83EABBB6FB33A79172A902 /* Pods-JadwalSholat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -470,6 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = id.co.codelatos.JadwalSholat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

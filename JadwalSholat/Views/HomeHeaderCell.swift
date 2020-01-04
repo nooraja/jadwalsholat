@@ -13,8 +13,8 @@ enum RefreshJadwalTable {
 }
 
 class HomeHeaderCell: UITableViewCell {
-
-    var changeHandler: ((RefreshJadwalTable) -> Void)?
+    
+    private var viewModel =  JadwalViewModel(networkModel: JadwalNetworkModel())
     
     //MARK:- Private Property
 
@@ -107,10 +107,7 @@ class HomeHeaderCell: UITableViewCell {
     }
     
     @objc func handleRefresh() {
-        self.emit(.didUpdateJadwal)
+        viewModel.reloadJadwal()
     }
 
-    func emit(_ change: RefreshJadwalTable) {
-        changeHandler?(change)
-    }
 }
