@@ -8,7 +8,13 @@
 
 import UIKit
 
+enum RefreshJadwalTable {
+    case didUpdateJadwal
+}
+
 class HomeHeaderCell: UITableViewCell {
+
+    var changeHandler: ((RefreshJadwalTable) -> Void)?
     
     //MARK:- Private Property
 
@@ -38,10 +44,16 @@ class HomeHeaderCell: UITableViewCell {
     }()
     
     private let cellView: UIView = {
-        let vw = UIView()
+        let vw = UIView(frame: .zero)
         vw.translatesAutoresizingMaskIntoConstraints = false
-        vw.layer.masksToBounds = false
         return vw
+    }()
+    
+    private let refreshButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "refresh") , for: .normal)
+        button.tintColor = .black
+        return button
     }()
     
     //MARK:- Public Method
@@ -71,23 +83,34 @@ class HomeHeaderCell: UITableViewCell {
     fileprivate func setupUI() {
         contentView.addSubview(cellView)
         cellView.backgroundColor = .clear
-        cellView.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, left: contentView.leftAnchor,
+        cellView.anchor(top: contentView.topAnchor, left: contentView.leftAnchor,
                         bottom: contentView.bottomAnchor, right: contentView.rightAnchor,
-                        paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: 0, height: 0 )
-        
-        cellView.addSubview(dateLabel)
-        cellView.addSubview(exactTimeLabel)
+                        paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+
         cellView.addSubview(detailPlaceLabel)
+        detailPlaceLabel.anchor(top: cellView.topAnchor, left: cellView.leftAnchor, bottom: nil, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+
+        let stackView = UIStackView(arrangedSubviews: [exactTimeLabel, refreshButton])
+        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        detailPlaceLabel.anchor(top: cellView.topAnchor, left: cellView.leftAnchor, bottom: nil, right: nil, paddingTop: 8, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        cellView.addSubview(stackView)
+        stackView.anchor(top: detailPlaceLabel.bottomAnchor, left: cellView.leftAnchor, bottom: nil, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 0)
         
-        exactTimeLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: nil, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 8, width: 0, height: 40)
-        exactTimeLabel.centerXAnchor.constraint(equalTo: cellView.centerXAnchor).isActive = true
-        exactTimeLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
-        
-        
-        dateLabel.anchor(top: nil, left: cellView.leftAnchor, bottom: cellView.bottomAnchor, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: 0, height: 30)
+        refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+
+        cellView.addSubview(dateLabel)
+        dateLabel.anchor(top: stackView.bottomAnchor, left: cellView.leftAnchor, bottom: nil, right: cellView.rightAnchor, paddingTop: 0, paddingLeft: 8, paddingBottom: 0, paddingRight: 0, width: 0, height: 30)
+        dateLabel.bottomAnchor.constraint(lessThanOrEqualTo: cellView.bottomAnchor, constant: 8).isActive = true
+    }
+    
+    @objc func handleRefresh() {
+        self.emit(.didUpdateJadwal)
     }
 
+    func emit(_ change: RefreshJadwalTable) {
+        changeHandler?(change)
+    }
 }
-

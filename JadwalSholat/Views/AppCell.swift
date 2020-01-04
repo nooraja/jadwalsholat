@@ -52,12 +52,11 @@ class AppCell: UITableViewCell {
         self.addSubview(nameOfPrayLabel)
         self.addSubview(timeToPrayLabel)
         
-        iconOfPray.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, left: contentView.safeAreaLayoutGuide.leftAnchor, bottom: contentView.safeAreaLayoutGuide.bottomAnchor, right: nil, paddingTop: 8, paddingLeft: 16, paddingBottom: 8, paddingRight: 8, width: 26, height: 26)
+        iconOfPray.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: nil, paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 0, width: 26, height: 26)
         
-        timeToPrayLabel.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, left: nil, bottom: contentView.safeAreaLayoutGuide.bottomAnchor, right: contentView.safeAreaLayoutGuide.rightAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 16, width: 80, height: 0)
+        timeToPrayLabel.anchor(top: contentView.topAnchor, left: nil, bottom: contentView.bottomAnchor, right: contentView.rightAnchor, paddingTop: 8, paddingLeft: 0, paddingBottom: 8, paddingRight: 8, width: 80, height: 0)
         
-        nameOfPrayLabel.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, left: iconOfPray.rightAnchor, bottom: contentView.safeAreaLayoutGuide.bottomAnchor, right: timeToPrayLabel.leftAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: self.contentView.frame.width - 64, height: 0)
-        
+        nameOfPrayLabel.anchor(top: contentView.topAnchor, left: iconOfPray.rightAnchor, bottom: contentView.bottomAnchor, right: timeToPrayLabel.leftAnchor, paddingTop: 8, paddingLeft: 8, paddingBottom: 8, paddingRight: 8, width: self.contentView.frame.width - 64, height: 0)
         
 	}
 

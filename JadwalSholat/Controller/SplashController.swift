@@ -95,9 +95,10 @@ extension SplashController {
                     guard let province = self?.province else {
                         return
                     }
-                    
-                    self?.present(JadwalController(viewModel: JadwalViewModelV2(networkModel: JadwalNetworkModelV2())), animated: false, completion: nil)
-                    
+
+                    let viewController = JadwalController(viewModel: JadwalViewModelV2(networkModel: JadwalNetworkModelV2()))
+                    viewController.modalPresentationStyle = .fullScreen
+                    self?.present(viewController, animated: false, completion: nil)
                 }
         })
     }
@@ -145,6 +146,8 @@ extension SplashController {
         case .notDetermined:
             print("Req Auth")
             locManager.requestWhenInUseAuthorization()
+        @unknown default:
+            fatalError()
         }
     }
 }
